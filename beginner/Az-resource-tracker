@@ -8,7 +8,7 @@ echo "=== VIRTUAL MACHINES ==="
 az vm list --query "[].{Name:name, RG:resourceGroup, Location:location, Size:hardwareProfile.vmSize, PowerState:powerState}" --output table
 
 echo -e "\n=== RESOURCE GROUPS ==="
-az group list --query "[].{Name:name, Location:location}" --output table
+az group list | jq '.[] | {Name:.name,Location:.location}'
 
 echo -e "\n=== STORAGE ACCOUNTS ==="
 az storage account list --query "[].{Name:name, RG:resourceGroup, Location:location, Tier:sku.tier}" --output table
