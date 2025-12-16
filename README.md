@@ -17,8 +17,8 @@ DevOps learning - shell script
 
 ## How to run Azure resource tracker
 
-cd beginner/Az-resource-tracker
-chmod +x Az-resource-tracker.sh
-./Az-resource-tracker.sh
+- cd beginner/Az-resource-tracker
+- chmod +x Az-resource-tracker.sh
+- ./Az-resource-tracker.sh
 
 This prints tables of your Azure virtual machines, resource groups, and storage accounts using Azure CLI queries.
