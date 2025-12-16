@@ -15,3 +15,10 @@ DevOps learning - shell script
     az vm start --resource-group "RGNAME" --name "VMNAME"
     ssh -i 'PATH' azureuser@'IP'
 
+## How to run Azure resource tracker
+
+cd beginner/Az-resource-tracker
+chmod +x Az-resource-tracker.sh
+./Az-resource-tracker.sh
+
+This prints tables of your Azure virtual machines, resource groups, and storage accounts using Azure CLI queries.
