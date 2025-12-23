@@ -12,8 +12,9 @@ DevOps learning - shell script
 - Azure CLI installed and logged in, vm login
     - az login
     - az vm list --query "[].{Name:name,RS:resourceGroup}" --output table
-    - az vm start --resource-group "RGNAME" --name "VMNAME"
-    - ssh -i 'PATH' azureuser@'IP'
+    - az vm start --resource-group MYRESOURCEGROUP-CENTRALINDIA --name TestVM
+    - az vm show -d -g MYRESOURCEGROUP-CENTRALINDIA -n TestVM --query publicIps -o tsv
+    - ssh -i /Users/Murali/Downloads/TestVM_key.pem azureuser@'IP'
 
 ## How to run Azure resource tracker
 
